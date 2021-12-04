@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="viewport" content="width=device-width"/>
+<title>Online Examination </title>
+<!-- STYLES & JQUERY 
+================================================== -->
+<link rel="stylesheet" type="text/css" href="TablePage.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/icons.css"/>
+<link rel="stylesheet" type="text/css" href="css/skinblue.css"/><!-- Change skin color here -->
+<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+<script src="js/jquery-1.9.0.min.js"></script><!-- scripts at the bottom of the document -->
+</head>
+<body>
+<!-- TOP LOGO & MENU
+================================================== -->
+<div class="grid">
+	<div class="row space-bot">
+		<!--Logo-->
+		<div class="c4">
+			<a href="admin_home.php">
+				
+			</a>
+		</div>
+		<!--Menu-->
+		<div class="c8">
+			<nav id="topNav">
+			<ul id="responsivemenu">
+				<li class="active"><a href="admin_home.php"><i class="icon-home homeicon"></i><span class="showmobile">Home</span></a></li>
+				<li><a href="#">College</a>
+				<ul style="display: none;">
+					<li><a href="add_college.php">Register</a></li>
+					<li><a href="view_college.php">List</a></li>					
+					<li><a href="req_status.php">Request status</a></li>
+				</ul>
+				</li>
+				<li><a href="#">Company</a>
+				<ul style="display: none;">					
+					<li><a href="add_company.php">Register</a></li>
+					<li><a href="view_companies_list.php">List</a></li>
+					<li><a href="view_feedback.php">Company Feedbacks</a></li>
+									
+				</ul>
+				</li>
+				<li><a href="#">Student</a>
+				<ul>
+					<li><a href="admin_view_student.php">Student List</a></li>
+					
+					<li><a href="view_result_admin.php">Result</a></li>
+					
+				</ul>
+				</li>	
+				</li>
+				<li><a href="#">Notification</a>
+				<ul style="display: none;">					
+					<li><a href="provide_notification.php">New</a></li>
+					<li><a href="view_notifications.php">View</a></li>
+									<li class="last"><a href="changepwd.php">Change password</a></li>
+				</ul>
+				</li>			
+				<li class="last"><a href="index.php">Logout</a></li>
+				
+			</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<!-- HEADER
+================================================== -->
+<div class="undermenuarea">
+	<div class="boxedshadow">
+	</div>
+	<div class="grid">
+		<div class="row">
+			<div class="c8">
+				<h1 class="titlehead">Admin panel</h1>
+			</div>
+			<div class="c4">
+				<h1 class="titlehead rightareaheader"><i class="icon-map-marker"></i> something..</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- CONTENT
+================================================== -->
+
+
+
+
+
+
+
+<!-- JAVASCRIPTS
+================================================== -->
+<!-- all -->
+<script src="js/modernizr-latest.js"></script>
+
+<!-- menu & scroll to top -->
+<script src="js/common.js"></script>
+
+<!-- twitter -->
+<script src="js/jquery.tweet.js"></script>
+
+<!-- cycle -->
+<script src="js/jquery.cycle.js"></script>
+
+<!-- carousel -->
+<script src="js/jquery.carouFredSel-6.0.3-packed.js"></script>
+
+<!-- Call Showcase Team- change 4 from min:4 and max:4 to the number of items you want visible -->
+<script type="text/javascript">
+$(window).load(function(){			
+			$('#recent-projects').carouFredSel({
+				responsive: true,
+				width: '100%',
+				auto: true,
+				circular	: true,
+				infinite	: false,
+				prev : {
+					button		: "#car_prev",
+					key			: "left",
+						},
+				next : {
+					button		: "#car_next",
+					key			: "right",
+							},
+				swipe: {
+					onMouse: true,
+					onTouch: true
+					},
+				scroll : 2000,
+				items: {
+					visible: {
+						min: 4,
+						max: 4
+					}
+				}
+			});
+		});	
+</script>
+
+<!-- CALL opacity on hover images -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("img.imgOpa").hover(function() {
+      $(this).stop().animate({opacity: "0.6"}, 'slow');
+    },
+    function() {
+      $(this).stop().animate({opacity: "1.0"}, 'slow');
+    });
+  });
+</script>
+</body>
+</html>

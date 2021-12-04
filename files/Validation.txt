@@ -1,0 +1,114 @@
+<script type="text/javascript">
+function valid()
+{
+	if(document.getElementById("name").value=="")
+	{
+		alert("Enter Name!");
+		document.getElementById("name").focus();
+    	return false;
+ 	}
+	if(/[^a-z ]/gi.test(document.getElementById("name").value))
+	{
+		alert("Special characters are not allowed in name");
+		document.getElementById("name").focus();
+		return false;
+	}
+	if(document.getElementById("age").value=="")
+   	{
+     	alert("Enter Age!");
+     	document.getElementById("age").focus();
+     	return false;
+ 	}
+	if(/[^0-9]/gi.test(document.getElementById("age").value))
+	{
+		alert("Special characters not allowed in age");
+		document.getElementById("age").focus();
+		return false;
+	}
+	if((document.getElementById("age").value).length>2)
+	
+	{
+		alert("Age is not valid");
+		document.getElementById("age").focus();
+		return false;
+	}
+	if(document.getElementById("adr").value=="")
+	{
+		alert("Enter Address!");
+		document.getElementById("adr").focus();
+    	return false;
+ 	}
+	if(document.getElementById("status").value=="-1")
+	{
+		alert("Select Status!");
+		document.getElementById("status").focus();
+    	return false;
+ 	}
+	if(document.getElementById("mn").value=="")
+   	{
+     	alert("Enter Phone Number!");
+     	document.getElementById("mn").focus();
+     	return false;
+ 	}
+	if(/[^0-9]/gi.test(document.getElementById("mn").value))
+	{
+		alert("Special characters not allowed in Phone Number");
+		document.getElementById("mn").focus();
+		return false;
+	}
+	if((document.getElementById("mn").value).length<10)
+	
+	{
+		alert("Phone number is not valid");
+		document.getElementById("mn").focus();
+		return false;
+	}
+	if((document.getElementById("mn").value).length>15)
+	
+	{
+		alert("Phone number is not valid");
+		document.getElementById("mn").focus();
+		return false;
+	}
+	
+	if(document.getElementById("email").value=="")
+	{
+		alert("Enter your E-mail ID");
+		document.getElementById("email").focus();
+		return false;
+	}
+	var emailPat =/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+	var emailid=document.getElementById("email").value;
+	var matchArray = emailid.match(emailPat);
+	if (matchArray == null)
+	{
+		alert("Your Email ID seems incorrect. Enter Correct Email ID.");
+		document.getElementById("email").focus();
+		return false;
+	}
+	if(document.getElementById("pwd").value=="")
+	{
+		alert("Enter Password!");
+		document.getElementById("pwd").focus();
+    	return false;
+ 	}
+	if(document.getElementById("pwd").value.length<6)
+	{
+		alert("Password is too short..Password should be atleast 6 characters...");
+		document.getElementById("pwd").focus();
+    	return false;
+	}
+	if(document.getElementById("cpwd").value=="")
+	{
+		alert("Enter Confirm Password!");
+		document.getElementById("cpwd").focus();
+    	return false;
+ 	}
+	if((document.getElementById("cpwd").value)!=(document.getElementById("pwd").value))
+	{
+		alert("Password is missmatch!");
+		document.getElementById("cpwd").focus();
+    	return false;
+ 	}
+}
+</script>
